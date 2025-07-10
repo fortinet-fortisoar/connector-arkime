@@ -1,0 +1,1132 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+      "@type": "WorkflowCollection",
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "00bb29e0-0073-4c8f-869c-cf1b95d10f0b",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "b15edf44-9644-490c-843d-4a84a053f758",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "92d92624-2791-4ea2-a5cf-5d0d7265b973",
+              "@type": "WorkflowStep",
+              "name": "Get All Connections",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "srcField": "",
+                  "dstField": "",
+                  "baselineDate": "Disabled",
+                  "baselineVis": "All Nodes",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_connections",
+                "operationTitle": "Get All Connections"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of nodes and links from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Connections",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b15edf44-9644-490c-843d-4a84a053f758",
+          "routes": [
+            {
+              "uuid": "4b46e8bf-ab17-46ca-b137-ff31ac5060d6",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Connections",
+              "sourceStep": "/api/3/workflow_steps/b15edf44-9644-490c-843d-4a84a053f758",
+              "targetStep": "/api/3/workflow_steps/92d92624-2791-4ea2-a5cf-5d0d7265b973"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "69567062-d323-47d1-8f1c-1735591e7106",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "3ce1cba2-f3bd-4555-b1f1-71c2d9ff7b0e",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "5fb41851-d948-49b7-ac79-f3498adb8aae",
+              "@type": "WorkflowStep",
+              "name": "Get All Connections CSV",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "srcField": "",
+                  "dstField": "",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_connections_csv",
+                "operationTitle": "Get All Connections CSV"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of nodes and links in CSV format from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Connections CSV",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/3ce1cba2-f3bd-4555-b1f1-71c2d9ff7b0e",
+          "routes": [
+            {
+              "uuid": "efd552fd-e117-45fb-85cc-2f1e7f40ed0d",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Connections CSV",
+              "sourceStep": "/api/3/workflow_steps/3ce1cba2-f3bd-4555-b1f1-71c2d9ff7b0e",
+              "targetStep": "/api/3/workflow_steps/5fb41851-d948-49b7-ac79-f3498adb8aae"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "d5efa5cc-0ee4-46a3-b43e-458352e2fcf3",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "dd2aabfc-e2c8-4607-8b72-f3ede1ff23fb",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "c6463514-493b-40ef-be49-b7b72b8f2150",
+              "@type": "WorkflowStep",
+              "name": "Get All PCAP Files",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_pcap_files",
+                "operationTitle": "Get All PCAP Files"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of PCAP files from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All PCAP Files",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/dd2aabfc-e2c8-4607-8b72-f3ede1ff23fb",
+          "routes": [
+            {
+              "uuid": "eeba6fad-9eec-4ee5-8c5c-81af944e4b77",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All PCAP Files",
+              "sourceStep": "/api/3/workflow_steps/dd2aabfc-e2c8-4607-8b72-f3ede1ff23fb",
+              "targetStep": "/api/3/workflow_steps/c6463514-493b-40ef-be49-b7b72b8f2150"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "6f6c27df-1278-4cae-a07e-750b5eeced4c",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "5aa0795e-5a08-4201-aa35-172473cb6cd8",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "cbaf5ca0-a10f-48e3-a11d-bbebcd9ba6e0",
+              "@type": "WorkflowStep",
+              "name": "Get All Sessions",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_sessions",
+                "operationTitle": "Get All Sessions"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of sessions from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Sessions",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/5aa0795e-5a08-4201-aa35-172473cb6cd8",
+          "routes": [
+            {
+              "uuid": "de2ed4e4-f034-4fcb-a5de-a4eb5321d224",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Sessions",
+              "sourceStep": "/api/3/workflow_steps/5aa0795e-5a08-4201-aa35-172473cb6cd8",
+              "targetStep": "/api/3/workflow_steps/cbaf5ca0-a10f-48e3-a11d-bbebcd9ba6e0"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "1e299fc6-1d4d-4371-bbdc-9776748ed16b",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "3bc9f74f-4803-434f-88b5-e4f32e460108",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "8cc95c7a-24aa-433c-9998-b23ebf248efd",
+              "@type": "WorkflowStep",
+              "name": "Get All Sessions CSV",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "ids": "",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_sessions_csv",
+                "operationTitle": "Get All Sessions CSV"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of sessions in CSV format from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Sessions CSV",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/3bc9f74f-4803-434f-88b5-e4f32e460108",
+          "routes": [
+            {
+              "uuid": "739545ab-bc3b-49f3-9415-74a9597df81f",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Sessions CSV",
+              "sourceStep": "/api/3/workflow_steps/3bc9f74f-4803-434f-88b5-e4f32e460108",
+              "targetStep": "/api/3/workflow_steps/8cc95c7a-24aa-433c-9998-b23ebf248efd"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "3baea981-baab-4dd9-b25d-45c0d0d7db7c",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "fd0abf0c-f79c-42ac-a969-0bc870cdd6f5",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "66b7482a-ecd9-484a-9b37-b2b239f62635",
+              "@type": "WorkflowStep",
+              "name": "Get All Sessions PCAP",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "ids": "",
+                  "segments": "",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_sessions_pcap",
+                "operationTitle": "Get All Sessions PCAP"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of raw session data in PCAP format from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Sessions PCAP",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/fd0abf0c-f79c-42ac-a969-0bc870cdd6f5",
+          "routes": [
+            {
+              "uuid": "161a75c3-df36-4ab0-b3ef-12f9de75c538",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Sessions PCAP",
+              "sourceStep": "/api/3/workflow_steps/fd0abf0c-f79c-42ac-a969-0bc870cdd6f5",
+              "targetStep": "/api/3/workflow_steps/66b7482a-ecd9-484a-9b37-b2b239f62635"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "59f4f92f-a4c4-41f1-9bdb-0974e1ed8344",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "9bc93510-8fe4-4a02-8ca5-7296dcfe6c42",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "ed02531b-fb24-43e2-a4c4-f08831b4c512",
+              "@type": "WorkflowStep",
+              "name": "Get All SPI Graph",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_spi_graph",
+                "operationTitle": "Get All SPI Graph"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of values for a field with counts and graph data from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All SPI Graph",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/9bc93510-8fe4-4a02-8ca5-7296dcfe6c42",
+          "routes": [
+            {
+              "uuid": "e34b16df-9336-4ec3-982a-9c66668022ea",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All SPI Graph",
+              "sourceStep": "/api/3/workflow_steps/9bc93510-8fe4-4a02-8ca5-7296dcfe6c42",
+              "targetStep": "/api/3/workflow_steps/ed02531b-fb24-43e2-a4c4-f08831b4c512"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "6cf17cde-8793-4d15-8259-9167ec0946e1",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "b453db3f-2e28-4cee-9172-27af0f9af90c",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "4fb01190-5c04-44da-9b66-d901ff8f8a67",
+              "@type": "WorkflowStep",
+              "name": "Get All SPI View",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "spi": "",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_spi_view",
+                "operationTitle": "Get All SPI View"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of field values with counts from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All SPI View",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b453db3f-2e28-4cee-9172-27af0f9af90c",
+          "routes": [
+            {
+              "uuid": "19199c78-7c88-416e-8f92-a8b2c410f3f7",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All SPI View",
+              "sourceStep": "/api/3/workflow_steps/b453db3f-2e28-4cee-9172-27af0f9af90c",
+              "targetStep": "/api/3/workflow_steps/4fb01190-5c04-44da-9b66-d901ff8f8a67"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "ab40207a-362d-45aa-afcf-cd00bca90872",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "b607980f-69cb-4eae-a034-a1b3bc343fb7",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "73d88834-52c6-484d-8143-25c51a58696b",
+              "@type": "WorkflowStep",
+              "name": "Get All Fields",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "array": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_fields",
+                "operationTitle": "Get All Fields"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a available database field objects pertaining to sessions from Arkime.",
+          "name": "Get All Fields",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/b607980f-69cb-4eae-a034-a1b3bc343fb7",
+          "routes": [
+            {
+              "uuid": "4c3053ec-8be7-4cc9-8865-75fc58eb28ed",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Fields",
+              "sourceStep": "/api/3/workflow_steps/b607980f-69cb-4eae-a034-a1b3bc343fb7",
+              "targetStep": "/api/3/workflow_steps/73d88834-52c6-484d-8143-25c51a58696b"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "360c280e-4797-4996-8f2c-6f903d2df1ad",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "5a7adeb1-cb1a-44ba-9dbd-8beb1c8d38ee",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "2dccd778-01d5-48d6-b6da-3d4fa76f6a80",
+              "@type": "WorkflowStep",
+              "name": "Get All Unique Fields",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "counts": "",
+                  "exp": "",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_unique_fields",
+                "operationTitle": "Get All Unique Fields"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves a list of unique field values (with or without counts) from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Unique Fields",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/5a7adeb1-cb1a-44ba-9dbd-8beb1c8d38ee",
+          "routes": [
+            {
+              "uuid": "9f0eec96-c6ec-4731-8bb6-ca82fbc0c98e",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Unique Fields",
+              "sourceStep": "/api/3/workflow_steps/5a7adeb1-cb1a-44ba-9dbd-8beb1c8d38ee",
+              "targetStep": "/api/3/workflow_steps/2dccd778-01d5-48d6-b6da-3d4fa76f6a80"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "1bccd750-23d4-46dc-b376-2c7a55797db7",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "e0021904-1892-42f7-8057-3574f3e7b0b5",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "cbe4f452-4551-4c86-a251-e429b9c4dfd9",
+              "@type": "WorkflowStep",
+              "name": "Get All Multiple Unique Fields",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "counts": "",
+                  "exp": "",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "get_all_multiple_unique_fields",
+                "operationTitle": "Get All Multiple Unique Fields"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieves an intersection of unique field values (with or without counts) from Arkime based on the filter parameters that you have specified.",
+          "name": "Get All Multiple Unique Fields",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/e0021904-1892-42f7-8057-3574f3e7b0b5",
+          "routes": [
+            {
+              "uuid": "be0503f1-c1f9-4589-a85b-91e87febf166",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get All Multiple Unique Fields",
+              "sourceStep": "/api/3/workflow_steps/e0021904-1892-42f7-8057-3574f3e7b0b5",
+              "targetStep": "/api/3/workflow_steps/cbe4f452-4551-4c86-a251-e429b9c4dfd9"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "df1d3789-fa60-482e-963f-2372f7e5f588",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "448d8c29-02a6-4226-9eb9-060f36d1669f",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "119e343e-4243-4fcc-9999-3be369b1093c",
+              "@type": "WorkflowStep",
+              "name": "Add Tags to Sessions",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "ids": "",
+                  "tags": "",
+                  "segments": "no",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "add_tags_to_sessions",
+                "operationTitle": "Add Tags to Sessions"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Add tag(s) to individual session(s) by id or by query in Arkime based on the filter parameters that you have specified.",
+          "name": "Add Tags to Sessions",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/448d8c29-02a6-4226-9eb9-060f36d1669f",
+          "routes": [
+            {
+              "uuid": "6fc696d7-556e-4c95-8d54-0bb467eb2f1a",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Add Tags to Sessions",
+              "sourceStep": "/api/3/workflow_steps/448d8c29-02a6-4226-9eb9-060f36d1669f",
+              "targetStep": "/api/3/workflow_steps/119e343e-4243-4fcc-9999-3be369b1093c"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "60f22d91-6d9a-4bdb-bc8c-75304de460c6",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "91d668f0-de92-4547-a275-69a4286e9fb1",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "3b46869d-2437-4b87-b199-b0b7f74746e4",
+              "@type": "WorkflowStep",
+              "name": "Remove Tags from Sessions",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "ids": "",
+                  "tags": "",
+                  "segments": "no",
+                  "date": 1,
+                  "expression": "",
+                  "view": "",
+                  "facets": "",
+                  "startTime": "",
+                  "stopTime": "",
+                  "order": "",
+                  "fields": "",
+                  "bounding": "Last Packet",
+                  "length": 100,
+                  "start": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "remove_tags_from_sessions",
+                "operationTitle": "Remove Tags from Sessions"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Removes tag(s) from individual session(s) by id or by query on Arkime based on the filter parameters that you have specified.",
+          "name": "Remove Tags from Sessions",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/91d668f0-de92-4547-a275-69a4286e9fb1",
+          "routes": [
+            {
+              "uuid": "b3cf435b-d5dc-401a-9ff5-eb6734ff4234",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Remove Tags from Sessions",
+              "sourceStep": "/api/3/workflow_steps/91d668f0-de92-4547-a275-69a4286e9fb1",
+              "targetStep": "/api/3/workflow_steps/3b46869d-2437-4b87-b199-b0b7f74746e4"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "3e2e09b4-ac76-4014-8da6-2d6b708a25fa",
+          "collection": "/api/3/workflow_collections/86b5d0db-47c0-43e6-86f8-af5aa77a75cf",
+          "steps": [
+            {
+              "uuid": "8fbb359e-c955-4ee4-8256-8575bb081484",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "56ca9aaf-3ed6-4907-a365-c8399df3db14",
+              "@type": "WorkflowStep",
+              "name": "Execute an API Request",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Arkime",
+                "config": "",
+                "params": {
+                  "method": "",
+                  "endpoint": "",
+                  "query_params": "",
+                  "payload": ""
+                },
+                "version": "1.0.0",
+                "connector": "arkime",
+                "operation": "execute_an_api_call",
+                "operationTitle": "Execute an API Request"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Sends an API request to an API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs.",
+          "name": "Execute an API Request",
+          "tag": "#Arkime",
+          "recordTags": [
+            "Arkime",
+            "arkime"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/8fbb359e-c955-4ee4-8256-8575bb081484",
+          "routes": [
+            {
+              "uuid": "b8f67e68-684c-4dff-8e88-c5d22d2a164b",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Execute an API Request",
+              "sourceStep": "/api/3/workflow_steps/8fbb359e-c955-4ee4-8256-8575bb081484",
+              "targetStep": "/api/3/workflow_steps/56ca9aaf-3ed6-4907-a365-c8399df3db14"
+            }
+          ]
+        }
+      ],
+      "name": "Sample - Arkime - 1.0.0",
+      "description": "Arkime is an open-source, large-scale, full packet capture (FPC) and indexing system. It's designed for security professionals to store and analyze network traffic in detail.",
+      "visible": true,
+      "recordTags": [
+        "Arkime",
+        "arkime"
+      ]
+    }
+  ]
+}
